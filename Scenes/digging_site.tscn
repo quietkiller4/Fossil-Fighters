@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://8o05f25kpowx"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ik31s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ik31s"]
+size = Vector3(4, 0.1, 4)
+
+[node name="digging_site" type="StaticBody3D" unique_id=1538037523]
+
+[node name="digging_site_Mesh" type="MeshInstance3D" parent="." unique_id=668711717]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("PlaneMesh_ik31s")
+
+[node name="digging_site_Collision" type="CollisionShape3D" parent="." unique_id=1962680708]
+shape = SubResource("BoxShape3D_ik31s")

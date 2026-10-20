@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://d25brdwrjq7mq"]
 
+[ext_resource type="Script" uid="uid://dr3xbpxajffx2" path="res://Fossil-Fighters/Scripts/player.gd" id="1_vmklh"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ik31s"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ik31s"]
+
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=533353646]
+script = ExtResource("1_vmklh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=739045065]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.48686445, 0)
@@ -10,3 +15,7 @@ shape = SubResource("CapsuleShape3D_ik31s")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=521454386]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7423571, -0.20046523)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2126835194]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.48674121, 0)
+mesh = SubResource("CapsuleMesh_ik31s")

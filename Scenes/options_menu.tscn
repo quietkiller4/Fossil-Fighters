@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dcpjb7xiak50a"]
+
+[node name="options_menu" type="Control" unique_id=1148508573]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="musicHSlider" type="HSlider" parent="." unique_id=1571859966]
+layout_mode = 0
+offset_left = 657.0
+offset_top = 112.0
+offset_right = 952.0
+offset_bottom = 206.0
+
+[node name="musicTextEdit" type="TextEdit" parent="." unique_id=335250133]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 136.0
+offset_right = 548.0
+offset_bottom = 184.0
+text = "Music"
+
+[node name="soundTextEdit2" type="TextEdit" parent="." unique_id=1524211401]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 218.0
+offset_right = 546.0
+offset_bottom = 266.0
+text = "Sound"
+
+[node name="soundHSlider2" type="HSlider" parent="." unique_id=1286777820]
+layout_mode = 0
+offset_left = 661.0
+offset_top = 196.0
+offset_right = 956.0
+offset_bottom = 290.0
