@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bggg2in486e0o"]
+
+[ext_resource type="Script" uid="uid://b7phb0jc8lcf1" path="res://Fossil-Fighters/Scripts/main_menu.gd" id="1_kdext"]
+
+[node name="MainMenu" type="Control" unique_id=360168360]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kdext")
+
+[node name="ButtonManager" type="Control" parent="." unique_id=1322067904]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="ButtonManager" unique_id=2019785724]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 231.0
+offset_right = 656.0
+offset_bottom = 319.0
+text = "Start Game"
+
+[node name="Options" type="Button" parent="ButtonManager" unique_id=2126843655]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 348.0
+offset_right = 658.0
+offset_bottom = 436.0
+text = "Options"
+
+[node name="Quit" type="Button" parent="ButtonManager" unique_id=963463812]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 469.0
+offset_right = 658.0
+offset_bottom = 557.0
+text = "Quit"
+
+[connection signal="pressed" from="ButtonManager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ButtonManager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ButtonManager/Quit" to="." method="_on_quit_pressed"]
