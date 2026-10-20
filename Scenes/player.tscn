@@ -5,8 +5,8 @@
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=533353646]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=739045065]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0194811, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.48686445, 0)
 shape = SubResource("CapsuleShape3D_ik31s")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=521454386]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4687983, -0.49169415)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7423571, -0.20046523)

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dmmmvh2sv3xd8"]
+
+[ext_resource type="PackedScene" uid="uid://c5hgmdeg5nlbw" path="res://Fossil-Fighters/Scenes/ground.tscn" id="1_g1ith"]
+[ext_resource type="PackedScene" uid="uid://d25brdwrjq7mq" path="res://Fossil-Fighters/Scenes/player.tscn" id="2_xe387"]
+
+[node name="World" type="Node" unique_id=672129971]
+
+[node name="Ground" parent="." unique_id=116510505 instance=ExtResource("1_g1ith")]
+
+[node name="CharacterBody3D" parent="." unique_id=533353646 instance=ExtResource("2_xe387")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00058305264, 0.061050236, 0.005889997)
