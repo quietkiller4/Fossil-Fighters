@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dcpjb7xiak50a"]
 
+[ext_resource type="Script" uid="uid://cwdrje6unxb6v" path="res://Fossil-Fighters/Scripts/options_menu.gd" id="1_qu5tt"]
+
 [node name="options_menu" type="Control" unique_id=1148508573]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qu5tt")
 
 [node name="musicHSlider" type="HSlider" parent="." unique_id=1571859966]
 layout_mode = 0
@@ -37,3 +40,11 @@ offset_left = 661.0
 offset_top = 196.0
 offset_right = 956.0
 offset_bottom = 290.0
+
+[node name="backButton" type="Button" parent="." unique_id=893754754]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 564.0
+offset_right = 736.0
+offset_bottom = 632.0
+text = "Back"
