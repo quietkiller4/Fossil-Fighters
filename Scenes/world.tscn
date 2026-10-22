@@ -6,12 +6,12 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ik31s"]
 
-[node name="World" type="Node" unique_id=672129971]
+[node name="World" type="Node3D" unique_id=1590470933]
 
 [node name="Ground" parent="." unique_id=116510505 instance=ExtResource("1_g1ith")]
 
-[node name="CharacterBody3D" parent="." unique_id=533353646 instance=ExtResource("2_xe387")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00058305264, 0.061050236, 0.005889997)
+[node name="player" parent="." unique_id=533353646 instance=ExtResource("2_xe387")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1321627, 0.093235075, 1.2241122)
 
 [node name="teleporter_to_digging_site1" type="Area3D" parent="." unique_id=1032098100]
 script = ExtResource("3_xe387")
