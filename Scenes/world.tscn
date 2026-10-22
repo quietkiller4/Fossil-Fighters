@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://c5hgmdeg5nlbw" path="res://Fossil-Fighters/Scenes/ground.tscn" id="1_g1ith"]
 [ext_resource type="PackedScene" uid="uid://d25brdwrjq7mq" path="res://Fossil-Fighters/Scenes/player.tscn" id="2_xe387"]
+[ext_resource type="Script" uid="uid://btaf7cfdbafiv" path="res://Fossil-Fighters/Scripts/teleporter_to_digging_site_1.gd" id="3_xe387"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ik31s"]
 
 [node name="World" type="Node" unique_id=672129971]
 
@@ -9,3 +12,12 @@
 
 [node name="CharacterBody3D" parent="." unique_id=533353646 instance=ExtResource("2_xe387")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00058305264, 0.061050236, 0.005889997)
+
+[node name="teleporter_to_digging_site1" type="Area3D" parent="." unique_id=1032098100]
+script = ExtResource("3_xe387")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="teleporter_to_digging_site1" unique_id=428213170]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.7187853, 0.3517325, 1.7383368)
+shape = SubResource("BoxShape3D_ik31s")
+
+[connection signal="body_entered" from="teleporter_to_digging_site1" to="teleporter_to_digging_site1" method="_on_body_entered"]

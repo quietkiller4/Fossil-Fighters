@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://8o05f25kpowx"]
 
+[ext_resource type="PackedScene" uid="uid://d25brdwrjq7mq" path="res://Fossil-Fighters/Scenes/player.tscn" id="1_b5ua5"]
+[ext_resource type="Script" uid="uid://v5nq1fqr34ae" path="res://Fossil-Fighters/Scripts/teleporter_to_main_world.gd" id="2_4ysuj"]
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_ik31s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ik31s"]
 size = Vector3(4, 0.1, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ticvn"]
 
 [node name="digging_site" type="StaticBody3D" unique_id=1538037523]
 
@@ -12,4 +17,20 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("PlaneMesh_ik31s")
 
 [node name="digging_site_Collision" type="CollisionShape3D" parent="." unique_id=1962680708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.045610428, 0)
 shape = SubResource("BoxShape3D_ik31s")
+
+[node name="CharacterBody3D" parent="." unique_id=533353646 instance=ExtResource("1_b5ua5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.134864, 0, -1.2638338)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1143359684]
+transform = Transform3D(1, 0, 0, 0, 0.00036390225, 0.99999994, 0, -0.99999994, 0.00036390225, 0, 6.3721113, 0)
+
+[node name="teleporter_to_main_world" type="Area3D" parent="." unique_id=1036760233]
+script = ExtResource("2_4ysuj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="teleporter_to_main_world" unique_id=1860862657]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.7416232, 0.27444327, 1.7383898)
+shape = SubResource("BoxShape3D_ticvn")
+
+[connection signal="body_entered" from="teleporter_to_main_world" to="teleporter_to_main_world" method="_on_body_entered"]
